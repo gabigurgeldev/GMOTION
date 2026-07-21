@@ -1,0 +1,34 @@
+{
+  "name": "studio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "remotion studio",
+    "render": "remotion render",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@gmotion/ai-director": "workspace:*",
+    "@gmotion/capcut": "workspace:*",
+    "@gmotion/core": "workspace:*",
+    "@gmotion/effects": "workspace:*",
+    "@gmotion/graphics": "workspace:*",
+    "@gmotion/presets": "workspace:*",
+    "@gmotion/templates": "workspace:*",
+    "@gmotion/three-scenes": "workspace:*",
+    "@gmotion/transitions": "workspace:*",
+    "@remotion/three": "4.0.495",
+    "@remotion/transitions": "4.0.495",
+    "@react-three/fiber": "^9.6.1",
+    "three": "^0.185.1",
+    "@remotion/cli": "4.0.495",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "remotion": "4.0.495"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "typescript": "^5.9.2"
+  }
+}

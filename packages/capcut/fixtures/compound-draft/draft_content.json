@@ -1,0 +1,85 @@
+{
+  "id": "COMPOUND-DRAFT-0001",
+  "duration": 2000000,
+  "fps": 30,
+  "canvas_config": {"width": 1080, "height": 1920, "ratio": "original", "background": null},
+  "materials": {
+    "videos": [
+      {
+        "id": "cmp-mat-1",
+        "type": "video",
+        "path": "",
+        "material_name": "Compound clipX",
+        "width": 1080,
+        "height": 1920,
+        "duration": 2000000,
+        "has_audio": false
+      }
+    ],
+    "audios": [],
+    "texts": [],
+    "drafts": [
+      {
+        "id": "draft-entry-1",
+        "type": "combination",
+        "combination_id": "cmb-1",
+        "draft": {
+          "id": "NESTED-0001",
+          "name": "Compound clipX",
+          "duration": 2000000,
+          "fps": 30,
+          "canvas_config": {"width": 1080, "height": 1920, "ratio": "original", "background": null},
+          "materials": {
+            "videos": [
+              {"id": "leaf-mat-1", "type": "photo", "path": "##_draftpath_placeholder_ZZ_##/Resources/leaf.png", "material_name": "leaf.png", "width": 1080, "height": 1920, "duration": 2000000, "has_audio": false}
+            ],
+            "audios": [],
+            "texts": [],
+            "common_mask": [
+              {"id": "mask-1", "type": "mask", "name": "circle", "resource_id": "circle", "config": {"width": 0.8, "height": 0.8}}
+            ],
+            "video_effects": [
+              {"id": "fx-1", "type": "video_effect", "name": "Blur", "effect_id": "123"}
+            ]
+          },
+          "tracks": [
+            {
+              "id": "nested-track-1",
+              "type": "video",
+              "segments": [
+                {
+                  "id": "nested-seg-1",
+                  "material_id": "leaf-mat-1",
+                  "extra_material_refs": ["mask-1", "fx-1"],
+                  "target_timerange": {"start": 0, "duration": 2000000},
+                  "source_timerange": {"start": 0, "duration": 2000000},
+                  "render_index": 0,
+                  "visible": true,
+                  "clip": {"scale": {"x": 1.0, "y": 1.0}, "rotation": 0.0, "transform": {"x": 0.0, "y": 0.0}, "flip": {"horizontal": false, "vertical": false}, "alpha": 1.0}
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "root-track-1",
+      "type": "video",
+      "segments": [
+        {
+          "id": "root-seg-1",
+          "material_id": "cmp-mat-1",
+          "extra_material_refs": ["mask-1", "fx-1"],
+          "target_timerange": {"start": 0, "duration": 2000000},
+          "source_timerange": {"start": 0, "duration": 2000000},
+          "render_index": 0,
+          "visible": true,
+          "clip": {"scale": {"x": 1.0, "y": 1.0}, "rotation": 0.0, "transform": {"x": 0.0, "y": 0.0}, "flip": {"horizontal": false, "vertical": false}, "alpha": 1.0}
+        }
+      ]
+    }
+  ]
+}

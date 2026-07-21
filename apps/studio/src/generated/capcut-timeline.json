@@ -1,0 +1,436 @@
+{
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "durationInFrames": 360,
+  "tracks": [
+    {
+      "id": "bg",
+      "type": "video",
+      "renderIndex": 0,
+      "clips": [
+        {
+          "kind": "image",
+          "src": "capcut/BG 4.png",
+          "id": "bg-a",
+          "start": 0,
+          "duration": 200,
+          "sourceStart": 0,
+          "transform": {
+            "scaleX": 1.16,
+            "scaleY": 1.16,
+            "rotation": 0,
+            "posX": 540,
+            "posY": 960,
+            "alpha": 1,
+            "flipH": false,
+            "flipV": false
+          },
+          "keyframes": [
+            {
+              "property": "scaleX",
+              "points": [
+                {
+                  "frame": 0,
+                  "value": 1.16
+                },
+                {
+                  "frame": 200,
+                  "value": 1.3
+                }
+              ]
+            },
+            {
+              "property": "scaleY",
+              "points": [
+                {
+                  "frame": 0,
+                  "value": 1.16
+                },
+                {
+                  "frame": 200,
+                  "value": 1.3
+                }
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "name": "saturate",
+              "kind": "video_effect",
+              "intensity": 0.35,
+              "frames": null
+            },
+            {
+              "name": "contrast",
+              "kind": "video_effect",
+              "intensity": 0.18,
+              "frames": null
+            },
+            {
+              "name": "out",
+              "kind": "anim_out",
+              "intensity": null,
+              "frames": 14
+            }
+          ]
+        },
+        {
+          "kind": "image",
+          "src": "capcut/BG 5.png",
+          "id": "bg-b",
+          "start": 186,
+          "duration": 174,
+          "sourceStart": 0,
+          "transform": {
+            "scaleX": 1.3,
+            "scaleY": 1.3,
+            "rotation": 0,
+            "posX": 540,
+            "posY": 960,
+            "alpha": 1,
+            "flipH": false,
+            "flipV": false
+          },
+          "keyframes": [
+            {
+              "property": "scaleX",
+              "points": [
+                {
+                  "frame": 0,
+                  "value": 1.3
+                },
+                {
+                  "frame": 174,
+                  "value": 1.16
+                }
+              ]
+            },
+            {
+              "property": "scaleY",
+              "points": [
+                {
+                  "frame": 0,
+                  "value": 1.3
+                },
+                {
+                  "frame": 174,
+                  "value": 1.16
+                }
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "name": "saturate",
+              "kind": "video_effect",
+              "intensity": 0.35,
+              "frames": null
+            },
+            {
+              "name": "in",
+              "kind": "anim_in",
+              "intensity": null,
+              "frames": 16
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "particles",
+      "type": "video",
+      "renderIndex": 2,
+      "clips": [
+        {
+          "kind": "native",
+          "native": "particle",
+          "component": "particles",
+          "props": {
+            "count": 240
+          },
+          "id": "parts",
+          "start": 0,
+          "duration": 360,
+          "sourceStart": 0,
+          "transform": {
+            "scaleX": 1,
+            "scaleY": 1,
+            "rotation": 0,
+            "posX": 540,
+            "posY": 960,
+            "alpha": 1,
+            "flipH": false,
+            "flipV": false
+          },
+          "keyframes": [],
+          "effects": []
+        }
+      ]
+    },
+    {
+      "id": "title3d",
+      "type": "video",
+      "renderIndex": 3,
+      "clips": [
+        {
+          "kind": "native",
+          "native": "three",
+          "component": "extruded-text",
+          "props": {
+            "text": "GMOTION",
+            "size": 0.56,
+            "depth": 0.4,
+            "material": "metal",
+            "color": "#eef1ff",
+            "rotation": [
+              0,
+              -0.1,
+              0
+            ]
+          },
+          "id": "title",
+          "start": 8,
+          "duration": 100,
+          "sourceStart": 0,
+          "transform": {
+            "scaleX": 1,
+            "scaleY": 1,
+            "rotation": 0,
+            "posX": 540,
+            "posY": 960,
+            "alpha": 1,
+            "flipH": false,
+            "flipV": false
+          },
+          "keyframes": [],
+          "effects": []
+        }
+      ]
+    },
+    {
+      "id": "text",
+      "type": "video",
+      "renderIndex": 4,
+      "clips": [
+        {
+          "kind": "text",
+          "text": "EDITE COMO PRO",
+          "color": "#ffffff",
+          "fontSize": 9,
+          "fontPath": null,
+          "id": "h1",
+          "start": 118,
+          "duration": 120,
+          "sourceStart": 0,
+          "transform": {
+            "scaleX": 1,
+            "scaleY": 1,
+            "rotation": 0,
+            "posX": 540,
+            "posY": 560,
+            "alpha": 1,
+            "flipH": false,
+            "flipV": false
+          },
+          "keyframes": [],
+          "effects": [
+            {
+              "name": "in",
+              "kind": "anim_in",
+              "intensity": null,
+              "frames": 12
+            },
+            {
+              "name": "out",
+              "kind": "anim_out",
+              "intensity": null,
+              "frames": 10
+            }
+          ]
+        },
+        {
+          "kind": "text",
+          "text": "sem After Effects",
+          "color": "#ffd45e",
+          "fontSize": 5,
+          "fontPath": null,
+          "id": "h2",
+          "start": 142,
+          "duration": 96,
+          "sourceStart": 0,
+          "transform": {
+            "scaleX": 1,
+            "scaleY": 1,
+            "rotation": 0,
+            "posX": 540,
+            "posY": 690,
+            "alpha": 1,
+            "flipH": false,
+            "flipV": false
+          },
+          "keyframes": [],
+          "effects": [
+            {
+              "name": "in",
+              "kind": "anim_in",
+              "intensity": null,
+              "frames": 12
+            },
+            {
+              "name": "out",
+              "kind": "anim_out",
+              "intensity": null,
+              "frames": 8
+            }
+          ]
+        },
+        {
+          "kind": "text",
+          "text": "só com código",
+          "color": "#ffffff",
+          "fontSize": 7,
+          "fontPath": null,
+          "id": "h3",
+          "start": 250,
+          "duration": 78,
+          "sourceStart": 0,
+          "transform": {
+            "scaleX": 1,
+            "scaleY": 1,
+            "rotation": 0,
+            "posX": 540,
+            "posY": 600,
+            "alpha": 1,
+            "flipH": false,
+            "flipV": false
+          },
+          "keyframes": [],
+          "effects": [
+            {
+              "name": "in",
+              "kind": "anim_in",
+              "intensity": null,
+              "frames": 12
+            },
+            {
+              "name": "out",
+              "kind": "anim_out",
+              "intensity": null,
+              "frames": 8
+            }
+          ]
+        },
+        {
+          "kind": "text",
+          "text": "@gmotion",
+          "color": "#ffffff",
+          "fontSize": 6,
+          "fontPath": null,
+          "id": "cta",
+          "start": 298,
+          "duration": 62,
+          "sourceStart": 0,
+          "transform": {
+            "scaleX": 1,
+            "scaleY": 1,
+            "rotation": 0,
+            "posX": 540,
+            "posY": 1500,
+            "alpha": 1,
+            "flipH": false,
+            "flipV": false
+          },
+          "keyframes": [],
+          "effects": [
+            {
+              "name": "in",
+              "kind": "anim_in",
+              "intensity": null,
+              "frames": 14
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grade",
+      "type": "video",
+      "renderIndex": 5,
+      "clips": [
+        {
+          "kind": "native",
+          "native": "shader",
+          "component": "film-grain",
+          "props": {
+            "intensity": 0.1
+          },
+          "id": "grain",
+          "start": 0,
+          "duration": 360,
+          "sourceStart": 0,
+          "transform": {
+            "scaleX": 1,
+            "scaleY": 1,
+            "rotation": 0,
+            "posX": 540,
+            "posY": 960,
+            "alpha": 1,
+            "flipH": false,
+            "flipV": false
+          },
+          "keyframes": [],
+          "effects": []
+        },
+        {
+          "kind": "native",
+          "native": "shader",
+          "component": "vignette",
+          "props": {
+            "intensity": 0.55
+          },
+          "id": "vig",
+          "start": 0,
+          "duration": 360,
+          "sourceStart": 0,
+          "transform": {
+            "scaleX": 1,
+            "scaleY": 1,
+            "rotation": 0,
+            "posX": 540,
+            "posY": 960,
+            "alpha": 1,
+            "flipH": false,
+            "flipV": false
+          },
+          "keyframes": [],
+          "effects": []
+        },
+        {
+          "kind": "native",
+          "native": "shader",
+          "component": "light-leaks",
+          "props": {
+            "intensity": 0.9
+          },
+          "id": "leak",
+          "start": 232,
+          "duration": 70,
+          "sourceStart": 0,
+          "transform": {
+            "scaleX": 1,
+            "scaleY": 1,
+            "rotation": 0,
+            "posX": 540,
+            "posY": 960,
+            "alpha": 1,
+            "flipH": false,
+            "flipV": false
+          },
+          "keyframes": [],
+          "effects": []
+        }
+      ]
+    }
+  ]
+}

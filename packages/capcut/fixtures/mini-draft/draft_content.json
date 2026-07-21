@@ -1,0 +1,89 @@
+{
+  "id": "MINI-DRAFT-0001",
+  "duration": 3000000,
+  "fps": 30,
+  "canvas_config": {"width": 1080, "height": 1920, "ratio": "original", "background": null},
+  "materials": {
+    "videos": [
+      {
+        "id": "vid-mat-1",
+        "type": "photo",
+        "path": "##_draftpath_placeholder_AAAA-BBBB_##/Resources/bg.png",
+        "material_name": "bg.png",
+        "width": 1080,
+        "height": 1920,
+        "duration": 3000000,
+        "has_audio": false
+      }
+    ],
+    "audios": [],
+    "texts": [
+      {
+        "id": "txt-mat-1",
+        "type": "text",
+        "content": "{\"text\":\"OI\",\"styles\":[{\"fill\":{\"content\":{\"render_type\":\"solid\",\"solid\":{\"color\":[1,1,1]}}},\"font\":{\"path\":\"##_draftpath_placeholder_AAAA-BBBB_##/Resources/font.ttf\",\"id\":\"\"},\"size\":15,\"range\":[0,2]}]}"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "track-video-1",
+      "type": "video",
+      "attribute": 0,
+      "segments": [
+        {
+          "id": "seg-vid-1",
+          "material_id": "vid-mat-1",
+          "extra_material_refs": [],
+          "target_timerange": {"start": 0, "duration": 3000000},
+          "source_timerange": {"start": 0, "duration": 3000000},
+          "render_index": 0,
+          "visible": true,
+          "volume": 1.0,
+          "speed": 1.0,
+          "clip": {
+            "scale": {"x": 1.0, "y": 1.0},
+            "rotation": 0.0,
+            "transform": {"x": 0.0, "y": 0.0},
+            "flip": {"horizontal": false, "vertical": false},
+            "alpha": 1.0
+          },
+          "common_keyframes": [
+            {
+              "id": "kf-1",
+              "material_id": "",
+              "property_type": "KFTypeScaleX",
+              "keyframe_list": [
+                {"id": "k0", "time_offset": 0, "values": [1.0], "left_control": {"x": 0.0, "y": 0.0}, "right_control": {"x": 1.0, "y": 1.0}},
+                {"id": "k1", "time_offset": 3000000, "values": [1.5], "left_control": {"x": 0.0, "y": 0.0}, "right_control": {"x": 1.0, "y": 1.0}}
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "track-text-1",
+      "type": "text",
+      "attribute": 0,
+      "segments": [
+        {
+          "id": "seg-txt-1",
+          "material_id": "txt-mat-1",
+          "extra_material_refs": [],
+          "target_timerange": {"start": 500000, "duration": 2000000},
+          "source_timerange": null,
+          "render_index": 1,
+          "visible": true,
+          "clip": {
+            "scale": {"x": 1.0, "y": 1.0},
+            "rotation": 0.0,
+            "transform": {"x": 0.0, "y": -0.5},
+            "flip": {"horizontal": false, "vertical": false},
+            "alpha": 1.0
+          }
+        }
+      ]
+    }
+  ]
+}

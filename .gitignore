@@ -1,0 +1,24 @@
+node_modules/
+dist/
+out/
+.turbo/
+*.log
+.DS_Store
+.env
+.env.*
+*.txt
+!README*.txt
+
+# Segredos
+chave api elevenlabs.txt
+
+# Material de terceiros (curso EditClass) — copyright, não versionar
+PACK EDITCLASS/
+PACK EDITCLASS.rar
+
+# Mídias copiadas do PACK para o studio (copyright) — regeradas por `run pro`/`run demo`
+apps/studio/public/capcut/
+
+# Artefatos de render
+*.mp4
+*.mov

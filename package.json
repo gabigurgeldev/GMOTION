@@ -1,0 +1,20 @@
+{
+  "name": "gmotion",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@11.8.0",
+  "scripts": {
+    "dev": "turbo run dev --filter=studio",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "render": "turbo run render --filter=studio",
+    "fimei:narration": "node scripts/fimei-narration.mjs"
+  },
+  "devDependencies": {
+    "turbo": "^2.10.5",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "@remotion/media-parser": "4.0.495"
+  }
+}

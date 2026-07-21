@@ -1,0 +1,58 @@
+{
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "scenes": [
+    {
+      "id": "placeholder-hook",
+      "durationInFrames": 60,
+      "background": {"gradient": ["#1e1b4b", "#0b0b14"]},
+      "layers": [
+        {
+          "type": "text",
+          "text": "AI DIRECTOR",
+          "fontSize": 130,
+          "enter": "zoom-in-bounce",
+          "loop": "pulse"
+        },
+        {
+          "type": "typewriter",
+          "text": "gere sua timeline com o CLI",
+          "charsPerSecond": 22,
+          "fontSize": 48,
+          "color": "#8be9fd",
+          "position": {"x": 50, "y": 62}
+        }
+      ]
+    },
+    {
+      "id": "placeholder-cta",
+      "durationInFrames": 70,
+      "background": {"gradient": ["#3b0764", "#0b0b14"]},
+      "layers": [
+        {
+          "type": "badge",
+          "text": "pnpm generate \"...\"",
+          "enter": "pop-in",
+          "borderColors": ["#22d3ee", "#a78bfa"]
+        },
+        {
+          "type": "counter",
+          "to": 100,
+          "suffix": "%",
+          "enter": "fade-in",
+          "position": {"x": 50, "y": 70},
+          "fontSize": 90,
+          "color": "#4ade80"
+        }
+      ]
+    }
+  ],
+  "transitions": [
+    {"after": 0, "transitionType": "whip-pan", "durationInFrames": 10}
+  ],
+  "effects": [
+    {"effectType": "film-grain", "intensity": 0.1},
+    {"effectType": "vignette", "intensity": 0.55}
+  ]
+}

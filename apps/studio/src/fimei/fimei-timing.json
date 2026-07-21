@@ -1,0 +1,21 @@
+{
+  "hasAudio": true,
+  "voiceId": "pNInz6obpgDQGcFmaJgB",
+  "blocks": {
+    "hook": {
+      "seconds": 4.31
+    },
+    "agitacao": {
+      "seconds": 12.748
+    },
+    "solucao": {
+      "seconds": 15.935
+    },
+    "prova": {
+      "seconds": 7.001
+    },
+    "cta": {
+      "seconds": 3.762
+    }
+  }
+}

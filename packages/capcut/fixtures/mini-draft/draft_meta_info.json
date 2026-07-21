@@ -1,0 +1,13 @@
+{
+  "draft_id": "MINI-DRAFT-0001",
+  "draft_fold_path": "",
+  "draft_root_path": "",
+  "draft_materials": [
+    {
+      "type": 0,
+      "value": [
+        {"id": "vid-mat-1", "file_Path": "./Resources/bg.png", "metetype": "photo"}
+      ]
+    }
+  ]
+}

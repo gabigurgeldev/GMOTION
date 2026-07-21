@@ -1,0 +1,43 @@
+{
+  "name": "@gmotion/capcut",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./render": "./src/render.ts"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "build": "tsc --noEmit",
+    "import-draft": "tsx src/cli.ts import",
+    "export-draft": "tsx src/cli.ts export",
+    "demo": "tsx src/cli.ts demo",
+    "pro": "tsx src/cli.ts pro"
+  },
+  "dependencies": {
+    "@gmotion/core": "workspace:*",
+    "@gmotion/effects": "workspace:*",
+    "@gmotion/graphics": "workspace:*",
+    "@gmotion/three-scenes": "workspace:*",
+    "@remotion/bundler": "4.0.495",
+    "@remotion/renderer": "4.0.495",
+    "zod": "4.3.6"
+  },
+  "peerDependencies": {
+    "react": ">=19.0.0",
+    "remotion": ">=4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.1.0",
+    "react": "^19.1.0",
+    "remotion": "4.0.495",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.2",
+    "vitest": "^4.1.10"
+  }
+}
