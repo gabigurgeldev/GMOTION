@@ -16,6 +16,12 @@ chave api elevenlabs.txt
 PACK EDITCLASS/
 PACK EDITCLASS.rar
 
+# Biblioteca de efeitos/assets pesados (12 GB, arquivos > 100 MB) — não vai pro git
+EFEITOS ASSETS/
+
+# Pasta vazia/temporária
+packages/Nova pasta/
+
 # Mídias copiadas do PACK para o studio (copyright) — regeradas por `run pro`/`run demo`
 apps/studio/public/capcut/
 
