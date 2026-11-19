@@ -1,0 +1,27 @@
+{
+  "hasAudio": false,
+  "voiceId": "",
+  "blocks": {
+    "gancho": {
+      "seconds": 6
+    },
+    "dor": {
+      "seconds": 8
+    },
+    "agitacao": {
+      "seconds": 8
+    },
+    "virada": {
+      "seconds": 10
+    },
+    "prova": {
+      "seconds": 10
+    },
+    "oferta": {
+      "seconds": 10
+    },
+    "cta": {
+      "seconds": 6
+    }
+  }
+}

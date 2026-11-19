@@ -4,55 +4,1034 @@
   "height": 1920,
   "scenes": [
     {
-      "id": "placeholder-hook",
-      "durationInFrames": 60,
-      "background": {"gradient": ["#1e1b4b", "#0b0b14"]},
+      "id": "scene-0",
+      "durationInFrames": 90,
+      "background": {
+        "color": null,
+        "gradient": [
+          "#0A0A0F",
+          "#1A1A2E"
+        ],
+        "angle": 0
+      },
       "layers": [
         {
           "type": "text",
-          "text": "AI DIRECTOR",
-          "fontSize": 130,
-          "enter": "zoom-in-bounce",
-          "loop": "pulse"
-        },
-        {
-          "type": "typewriter",
-          "text": "gere sua timeline com o CLI",
-          "charsPerSecond": 22,
-          "fontSize": 48,
-          "color": "#8be9fd",
-          "position": {"x": 50, "y": 62}
+          "text": "A maioria das agências\nvende \"posts\"\ne \"tráfego\\).",
+          "fontSize": 72,
+          "color": "#FFFFFF",
+          "fontWeight": 400,
+          "enter": "fade-in",
+          "enterFrames": 45,
+          "enterDirection": "up",
+          "exit": "fade-out",
+          "exitFrames": 15,
+          "exitDirection": "up",
+          "loop": null,
+          "startFrame": 0,
+          "durationInFrames": 90,
+          "position": {
+            "x": 540,
+            "y": 960
+          }
         }
       ]
     },
     {
-      "id": "placeholder-cta",
-      "durationInFrames": 70,
-      "background": {"gradient": ["#3b0764", "#0b0b14"]},
+      "id": "scene-1",
+      "durationInFrames": 90,
+      "background": {
+        "color": null,
+        "gradient": [
+          "#FFFFFF",
+          "#E0E0E0"
+        ],
+        "angle": 180
+      },
       "layers": [
         {
-          "type": "badge",
-          "text": "pnpm generate \"...\"",
-          "enter": "pop-in",
-          "borderColors": ["#22d3ee", "#a78bfa"]
+          "type": "shape",
+          "shape": "rect",
+          "color": "#D4A853",
+          "gradient": null,
+          "width": 200,
+          "height": 200,
+          "borderRadius": 0,
+          "enter": "zoom-in-bounce",
+          "enterFrames": 40,
+          "enterDirection": "up",
+          "exit": "zoom-out",
+          "exitFrames": 15,
+          "exitDirection": "up",
+          "loop": "rotate-loop",
+          "startFrame": 0,
+          "durationInFrames": 90,
+          "position": {
+            "x": 540,
+            "y": 600
+          }
         },
         {
-          "type": "counter",
-          "to": 100,
-          "suffix": "%",
+          "type": "text",
+          "text": "A Gestalt entrega\nArquitetura Tecnológica\ne Produto SaaS Próprio.",
+          "fontSize": 56,
+          "color": "#0A0A0F",
+          "fontWeight": 600,
+          "enter": "zoom-in-bounce",
+          "enterFrames": 40,
+          "enterDirection": "up",
+          "exit": "fade-out",
+          "exitFrames": 15,
+          "exitDirection": "up",
+          "loop": null,
+          "startFrame": 20,
+          "durationInFrames": 70,
+          "position": {
+            "x": 540,
+            "y": 1300
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene-2",
+      "durationInFrames": 90,
+      "background": {
+        "color": null,
+        "gradient": [
+          "#0A0A0F",
+          "#1A1A2E"
+        ],
+        "angle": 0
+      },
+      "layers": [
+        {
+          "type": "shape",
+          "shape": "rect",
+          "color": "#D4A853",
+          "gradient": null,
+          "width": 400,
+          "height": 600,
+          "borderRadius": 12,
+          "enter": "slide-in",
+          "enterFrames": 30,
+          "enterDirection": "left",
+          "exit": "slide-out",
+          "exitFrames": 15,
+          "exitDirection": "left",
+          "loop": "float",
+          "startFrame": 0,
+          "durationInFrames": 90,
+          "position": {
+            "x": 280,
+            "y": 960
+          }
+        },
+        {
+          "type": "shape",
+          "shape": "rect",
+          "color": "#D4A853",
+          "gradient": null,
+          "width": 400,
+          "height": 600,
+          "borderRadius": 12,
+          "enter": "slide-in",
+          "enterFrames": 30,
+          "enterDirection": "right",
+          "exit": "slide-out",
+          "exitFrames": 15,
+          "exitDirection": "right",
+          "loop": "float",
+          "startFrame": 0,
+          "durationInFrames": 90,
+          "position": {
+            "x": 800,
+            "y": 960
+          }
+        },
+        {
+          "type": "text",
+          "text": "• Stack Moderna (Node, Go, K8s)\n• White-label para sua marca\n• Time-to-market: semanas, não meses",
+          "fontSize": 36,
+          "color": "#E0E0E0",
+          "fontWeight": 400,
+          "enter": "slide-in",
+          "enterFrames": 30,
+          "enterDirection": "up",
+          "exit": "fade-out",
+          "exitFrames": 15,
+          "exitDirection": "up",
+          "loop": null,
+          "startFrame": 15,
+          "durationInFrames": 60,
+          "position": {
+            "x": 540,
+            "y": 1600
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene-3",
+      "durationInFrames": 90,
+      "background": {
+        "color": null,
+        "gradient": [
+          "#0A0A0F",
+          "#1A1A2E"
+        ],
+        "angle": 45
+      },
+      "layers": [
+        {
+          "type": "shape",
+          "shape": "circle",
+          "color": "#D4A853",
+          "gradient": [
+            "#D4A853",
+            "#FFFFFF"
+          ],
+          "width": 120,
+          "height": 120,
+          "borderRadius": 60,
+          "enter": "zoom-in-bounce",
+          "enterFrames": 30,
+          "enterDirection": "up",
+          "exit": "shrink-out",
+          "exitFrames": 15,
+          "exitDirection": "up",
+          "loop": "rotate-loop",
+          "startFrame": 0,
+          "durationInFrames": 90,
+          "position": {
+            "x": 540,
+            "y": 700
+          }
+        },
+        {
+          "type": "shape",
+          "shape": "circle",
+          "color": "#D4A853",
+          "gradient": null,
+          "width": 40,
+          "height": 40,
+          "borderRadius": 20,
+          "enter": "slide-in",
+          "enterFrames": 30,
+          "enterDirection": "left",
+          "exit": "slide-out",
+          "exitFrames": 15,
+          "exitDirection": "left",
+          "loop": "rotate-loop",
+          "startFrame": 10,
+          "durationInFrames": 80,
+          "position": {
+            "x": 300,
+            "y": 700
+          }
+        },
+        {
+          "type": "shape",
+          "shape": "circle",
+          "color": "#D4A853",
+          "gradient": null,
+          "width": 40,
+          "height": 40,
+          "borderRadius": 20,
+          "enter": "slide-in",
+          "enterFrames": 30,
+          "enterDirection": "right",
+          "exit": "slide-out",
+          "exitFrames": 15,
+          "exitDirection": "right",
+          "loop": "rotate-loop",
+          "startFrame": 10,
+          "durationInFrames": 80,
+          "position": {
+            "x": 780,
+            "y": 700
+          }
+        },
+        {
+          "type": "text",
+          "text": "Seu foco: Estratégia & Vendas.\nNosso foco: Tecnologia & Escala.",
+          "fontSize": 48,
+          "color": "#FFFFFF",
+          "fontWeight": 500,
+          "enter": "slide-in",
+          "enterFrames": 30,
+          "enterDirection": "up",
+          "exit": "fade-out",
+          "exitFrames": 15,
+          "exitDirection": "up",
+          "loop": null,
+          "startFrame": 20,
+          "durationInFrames": 70,
+          "position": {
+            "x": 540,
+            "y": 1200
+          }
+        },
+        {
+          "type": "badge",
+          "text": "Parceria",
+          "borderColors": [
+            "#D4A853"
+          ],
+          "fontSize": 28,
+          "enter": "pop-in",
+          "enterFrames": 20,
+          "enterDirection": "up",
+          "exit": "fade-out",
+          "exitFrames": 15,
+          "exitDirection": "up",
+          "loop": "pulse",
+          "startFrame": 40,
+          "durationInFrames": 50,
+          "position": {
+            "x": 540,
+            "y": 1450
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene-4",
+      "durationInFrames": 90,
+      "background": {
+        "color": null,
+        "gradient": [
+          "#0A0A0F",
+          "#1A1A2E"
+        ],
+        "angle": 0
+      },
+      "layers": [
+        {
+          "type": "text",
+          "text": "Diagnóstico de\nArquitetura & Produto",
+          "fontSize": 64,
+          "color": "#FFFFFF",
+          "fontWeight": 700,
+          "enter": "zoom-in-bounce",
+          "enterFrames": 40,
+          "enterDirection": "up",
+          "exit": "slide-out",
+          "exitFrames": 15,
+          "exitDirection": "down",
+          "loop": null,
+          "startFrame": 0,
+          "durationInFrames": 90,
+          "position": {
+            "x": 540,
+            "y": 650
+          }
+        },
+        {
+          "type": "text",
+          "text": "Sem custo. Sem compromisso.\nApenas clareza técnica.",
+          "fontSize": 36,
+          "color": "#E0E0E0",
+          "fontWeight": 300,
           "enter": "fade-in",
-          "position": {"x": 50, "y": 70},
-          "fontSize": 90,
-          "color": "#4ade80"
+          "enterFrames": 30,
+          "enterDirection": "up",
+          "exit": "fade-out",
+          "exitFrames": 15,
+          "exitDirection": "up",
+          "loop": null,
+          "startFrame": 20,
+          "durationInFrames": 70,
+          "position": {
+            "x": 540,
+            "y": 1000
+          }
+        },
+        {
+          "type": "shape",
+          "shape": "rect",
+          "color": "#D4A853",
+          "gradient": null,
+          "width": 80,
+          "height": 80,
+          "borderRadius": 40,
+          "enter": "zoom-in-bounce",
+          "enterFrames": 30,
+          "enterDirection": "up",
+          "exit": "shrink-out",
+          "exitFrames": 15,
+          "exitDirection": "up",
+          "loop": "float",
+          "startFrame": 40,
+          "durationInFrames": 50,
+          "position": {
+            "x": 540,
+            "y": 1250
+          }
+        },
+        {
+          "type": "badge",
+          "text": "Saiba Mais",
+          "borderColors": [
+            "#D4A853"
+          ],
+          "fontSize": 32,
+          "enter": "glitch-in",
+          "enterFrames": 30,
+          "enterDirection": "up",
+          "exit": "fade-out",
+          "exitFrames": 15,
+          "exitDirection": "up",
+          "loop": "glow-pulse",
+          "startFrame": 50,
+          "durationInFrames": 40,
+          "position": {
+            "x": 540,
+            "y": 1500
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene-5",
+      "durationInFrames": 90,
+      "background": {
+        "color": null,
+        "gradient": [
+          "#0A0A0F",
+          "#1A1A2E"
+        ],
+        "angle": 0
+      },
+      "layers": [
+        {
+          "type": "shape",
+          "shape": "circle",
+          "color": "#D4A853",
+          "gradient": [
+            "#D4A853",
+            "#FFFFFF"
+          ],
+          "width": 200,
+          "height": 200,
+          "borderRadius": 100,
+          "enter": "glitch-in",
+          "enterFrames": 40,
+          "enterDirection": "up",
+          "exit": "fade-out",
+          "exitFrames": 15,
+          "exitDirection": "up",
+          "loop": "float",
+          "startFrame": 0,
+          "durationInFrames": 90,
+          "position": {
+            "x": 540,
+            "y": 600
+          }
+        },
+        {
+          "type": "text",
+          "text": "Gestalt. Technology Partner.",
+          "fontSize": 48,
+          "color": "#FFFFFF",
+          "fontWeight": 500,
+          "enter": "pop-in",
+          "enterFrames": 30,
+          "enterDirection": "up",
+          "exit": "fade-out",
+          "exitFrames": 15,
+          "exitDirection": "up",
+          "loop": null,
+          "startFrame": 30,
+          "durationInFrames": 60,
+          "position": {
+            "x": 540,
+            "y": 900
+          }
+        },
+        {
+          "type": "badge",
+          "text": "Saiba Mais",
+          "borderColors": [
+            "#D4A853"
+          ],
+          "fontSize": 32,
+          "enter": "slide-in",
+          "enterFrames": 30,
+          "enterDirection": "up",
+          "exit": "fade-out",
+          "exitFrames": 15,
+          "exitDirection": "up",
+          "loop": "pulse",
+          "startFrame": 50,
+          "durationInFrames": 40,
+          "position": {
+            "x": 540,
+            "y": 1300
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene-6",
+      "durationInFrames": 90,
+      "background": {
+        "color": null,
+        "gradient": [
+          "#0A0A0F",
+          "#1A1A2E"
+        ],
+        "angle": 0
+      },
+      "layers": [
+        {
+          "type": "text",
+          "text": "A maioria das agências\nvende \"posts\"\ne \"tráfego\\).",
+          "fontSize": 72,
+          "color": "#FFFFFF",
+          "fontWeight": 400,
+          "enter": "fade-in",
+          "enterFrames": 45,
+          "enterDirection": "up",
+          "exit": "fade-out",
+          "exitFrames": 15,
+          "exitDirection": "up",
+          "loop": null,
+          "startFrame": 0,
+          "durationInFrames": 90,
+          "position": {
+            "x": 540,
+            "y": 960
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene-7",
+      "durationInFrames": 90,
+      "background": {
+        "color": null,
+        "gradient": [
+          "#FFFFFF",
+          "#E0E0E0"
+        ],
+        "angle": 180
+      },
+      "layers": [
+        {
+          "type": "shape",
+          "shape": "rect",
+          "color": "#D4A853",
+          "gradient": null,
+          "width": 200,
+          "height": 200,
+          "borderRadius": 0,
+          "enter": "zoom-in-bounce",
+          "enterFrames": 40,
+          "enterDirection": "up",
+          "exit": "zoom-out",
+          "exitFrames": 15,
+          "exitDirection": "up",
+          "loop": "rotate-loop",
+          "startFrame": 0,
+          "durationInFrames": 90,
+          "position": {
+            "x": 540,
+            "y": 600
+          }
+        },
+        {
+          "type": "text",
+          "text": "A Gestalt entrega\nArquitetura Tecnológica\ne Produto SaaS Próprio.",
+          "fontSize": 56,
+          "color": "#0A0A0F",
+          "fontWeight": 600,
+          "enter": "zoom-in-bounce",
+          "enterFrames": 40,
+          "enterDirection": "up",
+          "exit": "fade-out",
+          "exitFrames": 15,
+          "exitDirection": "up",
+          "loop": null,
+          "startFrame": 20,
+          "durationInFrames": 70,
+          "position": {
+            "x": 540,
+            "y": 1300
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene-8",
+      "durationInFrames": 90,
+      "background": {
+        "color": null,
+        "gradient": [
+          "#0A0A0F",
+          "#1A1A2E"
+        ],
+        "angle": 0
+      },
+      "layers": [
+        {
+          "type": "shape",
+          "shape": "rect",
+          "color": "#D4A853",
+          "gradient": null,
+          "width": 400,
+          "height": 600,
+          "borderRadius": 12,
+          "enter": "slide-in",
+          "enterFrames": 30,
+          "enterDirection": "left",
+          "exit": "slide-out",
+          "exitFrames": 15,
+          "exitDirection": "left",
+          "loop": "float",
+          "startFrame": 0,
+          "durationInFrames": 90,
+          "position": {
+            "x": 280,
+            "y": 960
+          }
+        },
+        {
+          "type": "shape",
+          "shape": "rect",
+          "color": "#D4A853",
+          "gradient": null,
+          "width": 400,
+          "height": 600,
+          "borderRadius": 12,
+          "enter": "slide-in",
+          "enterFrames": 30,
+          "enterDirection": "right",
+          "exit": "slide-out",
+          "exitFrames": 15,
+          "exitDirection": "right",
+          "loop": "float",
+          "startFrame": 0,
+          "durationInFrames": 90,
+          "position": {
+            "x": 800,
+            "y": 960
+          }
+        },
+        {
+          "type": "text",
+          "text": "• Stack Moderna (Node, Go, K8s)\n• White-label para sua marca\n• Time-to-market: semanas, não meses",
+          "fontSize": 36,
+          "color": "#E0E0E0",
+          "fontWeight": 400,
+          "enter": "slide-in",
+          "enterFrames": 30,
+          "enterDirection": "up",
+          "exit": "fade-out",
+          "exitFrames": 15,
+          "exitDirection": "up",
+          "loop": null,
+          "startFrame": 15,
+          "durationInFrames": 60,
+          "position": {
+            "x": 540,
+            "y": 1600
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene-9",
+      "durationInFrames": 90,
+      "background": {
+        "color": null,
+        "gradient": [
+          "#0A0A0F",
+          "#1A1A2E"
+        ],
+        "angle": 45
+      },
+      "layers": [
+        {
+          "type": "shape",
+          "shape": "circle",
+          "color": "#D4A853",
+          "gradient": [
+            "#D4A853",
+            "#FFFFFF"
+          ],
+          "width": 120,
+          "height": 120,
+          "borderRadius": 60,
+          "enter": "zoom-in-bounce",
+          "enterFrames": 30,
+          "enterDirection": "up",
+          "exit": "shrink-out",
+          "exitFrames": 15,
+          "exitDirection": "up",
+          "loop": "rotate-loop",
+          "startFrame": 0,
+          "durationInFrames": 90,
+          "position": {
+            "x": 540,
+            "y": 700
+          }
+        },
+        {
+          "type": "shape",
+          "shape": "circle",
+          "color": "#D4A853",
+          "gradient": null,
+          "width": 40,
+          "height": 40,
+          "borderRadius": 20,
+          "enter": "slide-in",
+          "enterFrames": 30,
+          "enterDirection": "left",
+          "exit": "slide-out",
+          "exitFrames": 15,
+          "exitDirection": "left",
+          "loop": "rotate-loop",
+          "startFrame": 10,
+          "durationInFrames": 80,
+          "position": {
+            "x": 300,
+            "y": 700
+          }
+        },
+        {
+          "type": "shape",
+          "shape": "circle",
+          "color": "#D4A853",
+          "gradient": null,
+          "width": 40,
+          "height": 40,
+          "borderRadius": 20,
+          "enter": "slide-in",
+          "enterFrames": 30,
+          "enterDirection": "right",
+          "exit": "slide-out",
+          "exitFrames": 15,
+          "exitDirection": "right",
+          "loop": "rotate-loop",
+          "startFrame": 10,
+          "durationInFrames": 80,
+          "position": {
+            "x": 780,
+            "y": 700
+          }
+        },
+        {
+          "type": "text",
+          "text": "Seu foco: Estratégia & Vendas.\nNosso foco: Tecnologia & Escala.",
+          "fontSize": 48,
+          "color": "#FFFFFF",
+          "fontWeight": 500,
+          "enter": "slide-in",
+          "enterFrames": 30,
+          "enterDirection": "up",
+          "exit": "fade-out",
+          "exitFrames": 15,
+          "exitDirection": "up",
+          "loop": null,
+          "startFrame": 20,
+          "durationInFrames": 70,
+          "position": {
+            "x": 540,
+            "y": 1200
+          }
+        },
+        {
+          "type": "badge",
+          "text": "Parceria",
+          "borderColors": [
+            "#D4A853"
+          ],
+          "fontSize": 28,
+          "enter": "pop-in",
+          "enterFrames": 20,
+          "enterDirection": "up",
+          "exit": "fade-out",
+          "exitFrames": 15,
+          "exitDirection": "up",
+          "loop": "pulse",
+          "startFrame": 40,
+          "durationInFrames": 50,
+          "position": {
+            "x": 540,
+            "y": 1450
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene-10",
+      "durationInFrames": 90,
+      "background": {
+        "color": null,
+        "gradient": [
+          "#0A0A0F",
+          "#1A1A2E"
+        ],
+        "angle": 0
+      },
+      "layers": [
+        {
+          "type": "text",
+          "text": "Diagnóstico de\nArquitetura & Produto",
+          "fontSize": 64,
+          "color": "#FFFFFF",
+          "fontWeight": 700,
+          "enter": "zoom-in-bounce",
+          "enterFrames": 40,
+          "enterDirection": "up",
+          "exit": "slide-out",
+          "exitFrames": 15,
+          "exitDirection": "down",
+          "loop": null,
+          "startFrame": 0,
+          "durationInFrames": 90,
+          "position": {
+            "x": 540,
+            "y": 650
+          }
+        },
+        {
+          "type": "text",
+          "text": "Sem custo. Sem compromisso.\nApenas clareza técnica.",
+          "fontSize": 36,
+          "color": "#E0E0E0",
+          "fontWeight": 300,
+          "enter": "fade-in",
+          "enterFrames": 30,
+          "enterDirection": "up",
+          "exit": "fade-out",
+          "exitFrames": 15,
+          "exitDirection": "up",
+          "loop": null,
+          "startFrame": 20,
+          "durationInFrames": 70,
+          "position": {
+            "x": 540,
+            "y": 1000
+          }
+        },
+        {
+          "type": "shape",
+          "shape": "rect",
+          "color": "#D4A853",
+          "gradient": null,
+          "width": 80,
+          "height": 80,
+          "borderRadius": 40,
+          "enter": "zoom-in-bounce",
+          "enterFrames": 30,
+          "enterDirection": "up",
+          "exit": "shrink-out",
+          "exitFrames": 15,
+          "exitDirection": "up",
+          "loop": "float",
+          "startFrame": 40,
+          "durationInFrames": 50,
+          "position": {
+            "x": 540,
+            "y": 1250
+          }
+        },
+        {
+          "type": "badge",
+          "text": "Saiba Mais",
+          "borderColors": [
+            "#D4A853"
+          ],
+          "fontSize": 32,
+          "enter": "glitch-in",
+          "enterFrames": 30,
+          "enterDirection": "up",
+          "exit": "fade-out",
+          "exitFrames": 15,
+          "exitDirection": "up",
+          "loop": "glow-pulse",
+          "startFrame": 50,
+          "durationInFrames": 40,
+          "position": {
+            "x": 540,
+            "y": 1500
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene-11",
+      "durationInFrames": 90,
+      "background": {
+        "color": null,
+        "gradient": [
+          "#0A0A0F",
+          "#1A1A2E"
+        ],
+        "angle": 0
+      },
+      "layers": [
+        {
+          "type": "shape",
+          "shape": "circle",
+          "color": "#D4A853",
+          "gradient": [
+            "#D4A853",
+            "#FFFFFF"
+          ],
+          "width": 200,
+          "height": 200,
+          "borderRadius": 100,
+          "enter": "glitch-in",
+          "enterFrames": 40,
+          "enterDirection": "up",
+          "exit": "fade-out",
+          "exitFrames": 15,
+          "exitDirection": "up",
+          "loop": "float",
+          "startFrame": 0,
+          "durationInFrames": 90,
+          "position": {
+            "x": 540,
+            "y": 600
+          }
+        },
+        {
+          "type": "text",
+          "text": "Gestalt. Technology Partner.",
+          "fontSize": 48,
+          "color": "#FFFFFF",
+          "fontWeight": 500,
+          "enter": "pop-in",
+          "enterFrames": 30,
+          "enterDirection": "up",
+          "exit": "fade-out",
+          "exitFrames": 15,
+          "exitDirection": "up",
+          "loop": null,
+          "startFrame": 30,
+          "durationInFrames": 60,
+          "position": {
+            "x": 540,
+            "y": 900
+          }
+        },
+        {
+          "type": "badge",
+          "text": "Saiba Mais",
+          "borderColors": [
+            "#D4A853"
+          ],
+          "fontSize": 32,
+          "enter": "slide-in",
+          "enterFrames": 30,
+          "enterDirection": "up",
+          "exit": "fade-out",
+          "exitFrames": 15,
+          "exitDirection": "up",
+          "loop": "pulse",
+          "startFrame": 50,
+          "durationInFrames": 40,
+          "position": {
+            "x": 540,
+            "y": 1300
+          }
         }
       ]
     }
   ],
   "transitions": [
-    {"after": 0, "transitionType": "whip-pan", "durationInFrames": 10}
+    {
+      "after": 1,
+      "transitionType": "shake-cut",
+      "durationInFrames": 15,
+      "direction": "up"
+    },
+    {
+      "after": 2,
+      "transitionType": "zoom-glitch",
+      "durationInFrames": 15,
+      "direction": "up"
+    },
+    {
+      "after": 3,
+      "transitionType": "rgb-split-wipe",
+      "durationInFrames": 15,
+      "direction": "left"
+    },
+    {
+      "after": 4,
+      "transitionType": "whip-pan",
+      "durationInFrames": 15,
+      "direction": "left"
+    },
+    {
+      "after": 5,
+      "transitionType": "light-leak",
+      "durationInFrames": 15,
+      "direction": "up"
+    },
+    {
+      "after": 6,
+      "transitionType": "film-burn",
+      "durationInFrames": 15,
+      "direction": "up"
+    },
+    {
+      "after": 7,
+      "transitionType": "zoom-glitch",
+      "durationInFrames": 15,
+      "direction": "up"
+    },
+    {
+      "after": 8,
+      "transitionType": "shake-cut",
+      "durationInFrames": 15,
+      "direction": "up"
+    },
+    {
+      "after": 9,
+      "transitionType": "zoom-glitch",
+      "durationInFrames": 15,
+      "direction": "up"
+    },
+    {
+      "after": 10,
+      "transitionType": "rgb-split-wipe",
+      "durationInFrames": 15,
+      "direction": "left"
+    },
+    {
+      "after": 11,
+      "transitionType": "whip-pan",
+      "durationInFrames": 15,
+      "direction": "left"
+    }
   ],
   "effects": [
-    {"effectType": "film-grain", "intensity": 0.1},
-    {"effectType": "vignette", "intensity": 0.55}
+    {
+      "effectType": "film-grain",
+      "intensity": 0.12
+    },
+    {
+      "effectType": "vignette",
+      "intensity": 0.6
+    }
+  ],
+  "audio": [
+    {
+      "src": "whoosh_deep_heartbeat.mp3",
+      "volume": 1,
+      "startFrame": 0,
+      "role": "sfx"
+    },
+    {
+      "src": "premium_ping.mp3",
+      "volume": 1,
+      "startFrame": 1050,
+      "role": "sfx"
+    }
   ]
 }

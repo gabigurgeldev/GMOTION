@@ -3,6 +3,7 @@ import {FontLoader} from 'three/examples/jsm/loaders/FontLoader.js';
 import {TextGeometry} from 'three/examples/jsm/geometries/TextGeometry.js';
 // Fonte vendorizada do repo do three.js (MIT) — o pacote npm não inclui mais examples/fonts
 import helvetikerBold from './fonts/helvetiker_bold.typeface.json';
+import {byQuality, useSceneQuality, type PreviewQuality} from './quality';
 
 export type ExtrudedTextMaterial = 'metal' | 'glass' | 'neon';
 
@@ -18,6 +19,8 @@ export type ExtrudedTextProps = {
   color?: string;
   position?: [number, number, number];
   rotation?: [number, number, number];
+  /** LOD. Default: herda da cena / auto (low no studio, high no render). */
+  previewQuality?: PreviewQuality;
 };
 
 const MaterialFor = ({
@@ -77,7 +80,9 @@ export const ExtrudedText = ({
   color = '#c0c8ff',
   position = [0, 0, 0],
   rotation = [0, 0, 0],
+  previewQuality,
 }: ExtrudedTextProps) => {
+  const quality = useSceneQuality(previewQuality);
   const geometry = useMemo(() => {
     const font = new FontLoader().parse(
       helvetikerBold as Parameters<FontLoader['parse']>[0],
@@ -86,15 +91,15 @@ export const ExtrudedText = ({
       font,
       size,
       depth,
-      curveSegments: 8,
+      curveSegments: byQuality(quality, 3, 8),
       bevelEnabled: true,
       bevelThickness: depth * 0.12,
       bevelSize: size * 0.03,
-      bevelSegments: 3,
+      bevelSegments: byQuality(quality, 1, 3),
     });
     geo.center();
     return geo;
-  }, [text, size, depth]);
+  }, [text, size, depth, quality]);
 
   return (
     <mesh geometry={geometry} position={position} rotation={rotation}>

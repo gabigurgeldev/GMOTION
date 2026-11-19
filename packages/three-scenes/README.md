@@ -43,3 +43,21 @@ Nunca `useFrame` do R3F para animar — sempre derive posição/rotação do fra
 ```sh
 pnpm --filter @gmotion/three-scenes test
 ```
+
+## Preview performático (LOD — Fase 17)
+
+`previewQuality?: 'low' | 'high'` em `GmotionThreeScene` (propaga via contexto
+pra `Particles`/`ExtrudedText`) ou por componente. **Default automático**:
+`low` no Remotion Studio, `high` no `remotion render` — detectado via
+`getRemotionEnvironment().isRendering`, sem setar nada.
+
+O que o modo `low` corta:
+- `dpr` do canvas: 0.7 (renderiza a ~70% da resolução)
+- `Particles`: ~35% da contagem pedida, esfera 4x4 em vez de 8x8 segments
+- `ExtrudedText`: `curveSegments` 8→3, `bevelSegments` 3→1
+
+Medição (LodShowcase: 3500 partículas + texto extrudado, 45 frames, mesma
+máquina de 12 cores, wall time do `remotion render` incluindo bundle fixo):
+`low` 15.6s vs `high` 22.1s. Descontando ~9s de bundle/setup fixos, o tempo
+por frame cai ~2x — no preview interativo do studio (sem bundle) o ganho de
+FPS é dessa ordem.

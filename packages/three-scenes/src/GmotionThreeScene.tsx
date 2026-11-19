@@ -1,6 +1,7 @@
 import type {ReactNode} from 'react';
 import {ThreeCanvas} from '@remotion/three';
 import {AbsoluteFill, useVideoConfig} from 'remotion';
+import {byQuality, SceneQualityProvider, useSceneQuality, type PreviewQuality} from './quality';
 
 export type GmotionThreeSceneProps = {
   children: ReactNode;
@@ -12,6 +13,12 @@ export type GmotionThreeSceneProps = {
   fov?: number;
   /** Adiciona iluminação padrão (ambient + key + rim). Default: true. */
   defaultLights?: boolean;
+  /**
+   * LOD: 'low' (preview) / 'high' (final). Default automático — low no
+   * Remotion Studio, high no `remotion render`. Propaga pros filhos via
+   * contexto (Particles/ExtrudedText leem sozinhos).
+   */
+  previewQuality?: PreviewQuality;
 };
 
 /** Iluminação padrão: ambiente fraca + key quente + rim fria. */
@@ -39,8 +46,10 @@ export const GmotionThreeScene = ({
   cameraPosition = [0, 1.5, 8],
   fov = 45,
   defaultLights = true,
+  previewQuality,
 }: GmotionThreeSceneProps) => {
   const {width, height} = useVideoConfig();
+  const quality = useSceneQuality(previewQuality);
 
   return (
     <AbsoluteFill style={{backgroundColor: background}}>
@@ -48,9 +57,13 @@ export const GmotionThreeScene = ({
         width={width}
         height={height}
         camera={{position: cameraPosition, fov}}
+        // low: renderiza a ~70% da resolução — maior ganho de FPS no preview
+        dpr={byQuality(quality, 0.7, 1)}
       >
-        {defaultLights ? <DefaultLights /> : null}
-        {children}
+        <SceneQualityProvider value={quality}>
+          {defaultLights ? <DefaultLights /> : null}
+          {children}
+        </SceneQualityProvider>
       </ThreeCanvas>
     </AbsoluteFill>
   );

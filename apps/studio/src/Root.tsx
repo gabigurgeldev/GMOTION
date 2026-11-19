@@ -42,8 +42,40 @@ import {
   CAPCUT_WIDTH,
   CAPCUT_HEIGHT,
 } from './compositions/CapcutImported';
+import {
+  AudioSyncShowcase,
+  AUDIO_SYNC_DURATION,
+} from './compositions/AudioSyncShowcase';
+import {
+  AssetLibraryShowcase,
+  ASSET_LIBRARY_DURATION,
+} from './compositions/AssetLibraryShowcase';
+import {
+  TextEngineShowcase,
+  TEXT_ENGINE_DURATION,
+} from './compositions/TextEngineShowcase';
+import {
+  CompositingShowcase,
+  COMPOSITING_DURATION,
+} from './compositions/CompositingShowcase';
+import {ColorShowcase, COLOR_DURATION} from './compositions/ColorShowcase';
+import {MorphShowcase, MORPH_DURATION} from './compositions/MorphShowcase';
+import {TrackSource, TRACK_SOURCE_DURATION} from './compositions/TrackSource';
+import {
+  TrackingShowcase,
+  TRACKING_DURATION,
+} from './compositions/TrackingShowcase';
+import {LodShowcase, LOD_DURATION} from './compositions/LodShowcase';
+import {
+  EditorialShowcase,
+  EDITORIAL_DURATION,
+} from './compositions/EditorialShowcase';
 import {FimeiPromo} from './fimei/FimeiPromo';
 import {FIMEI_PROMO_DURATION, FPS as FIMEI_FPS} from './fimei/timing';
+import {CursoMeiPromo} from './curso-mei/CursoMeiPromo';
+import {CURSO_MEI_DURATION, FPS as CURSO_MEI_FPS} from './curso-mei/timing';
+import {YoutubeTakes, defaultPlan} from './youtube-takes/YoutubeTakes';
+import type {Plan} from './youtube-takes/types';
 
 export const RemotionRoot = () => {
   return (
@@ -156,12 +188,117 @@ export const RemotionRoot = () => {
         height={CAPCUT_HEIGHT}
       />
       <Composition
+        id="AudioSyncShowcase"
+        component={AudioSyncShowcase}
+        durationInFrames={AUDIO_SYNC_DURATION}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+      <Composition
+        id="AssetLibraryShowcase"
+        component={AssetLibraryShowcase}
+        durationInFrames={ASSET_LIBRARY_DURATION}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+      <Composition
+        id="TextEngineShowcase"
+        component={TextEngineShowcase}
+        durationInFrames={TEXT_ENGINE_DURATION}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+      <Composition
+        id="CompositingShowcase"
+        component={CompositingShowcase}
+        durationInFrames={COMPOSITING_DURATION}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+      <Composition
+        id="ColorShowcase"
+        component={ColorShowcase}
+        durationInFrames={COLOR_DURATION}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+      <Composition
+        id="MorphShowcase"
+        component={MorphShowcase}
+        durationInFrames={MORPH_DURATION}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+      <Composition
+        id="TrackSource"
+        component={TrackSource}
+        durationInFrames={TRACK_SOURCE_DURATION}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+      <Composition
+        id="TrackingShowcase"
+        component={TrackingShowcase}
+        durationInFrames={TRACKING_DURATION}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+      <Composition
+        id="LodShowcase"
+        component={LodShowcase}
+        durationInFrames={LOD_DURATION}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{}}
+      />
+      <Composition
+        id="EditorialShowcase"
+        component={EditorialShowcase}
+        durationInFrames={EDITORIAL_DURATION}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+      <Composition
         id="FimeiPromo"
         component={FimeiPromo}
         durationInFrames={FIMEI_PROMO_DURATION}
         fps={FIMEI_FPS}
         width={1080}
         height={1920}
+      />
+      <Composition
+        id="CursoMeiPromo"
+        component={CursoMeiPromo}
+        durationInFrames={CURSO_MEI_DURATION}
+        fps={CURSO_MEI_FPS}
+        width={1080}
+        height={1920}
+        defaultProps={{courseName: 'MEI no Controle'}}
+      />
+      <Composition
+        id="YoutubeTakes"
+        component={YoutubeTakes}
+        durationInFrames={defaultPlan.durationInFrames}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={defaultPlan}
+        calculateMetadata={({props}: {props: Plan}) => ({
+          durationInFrames: props.durationInFrames,
+          fps: props.fps,
+          width: props.width,
+          height: props.height,
+        })}
       />
     </>
   );

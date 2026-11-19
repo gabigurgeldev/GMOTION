@@ -1,5 +1,5 @@
 import type {CSSProperties, ReactNode} from 'react';
-import {AbsoluteFill, Img, Sequence, Series} from 'remotion';
+import {AbsoluteFill, Audio, Img, Sequence, Series, staticFile} from 'remotion';
 import {
   TransitionSeries,
   linearTiming,
@@ -311,7 +311,34 @@ export const jsonToComposition = (timeline: TimelineSchema): ReactNode => {
     );
   }
 
-  return applyEffects(scenesNode, timeline.effects ?? []);
+  const visuals = applyEffects(scenesNode, timeline.effects ?? []);
+  const audio = timeline.audio ?? [];
+  if (audio.length === 0) return visuals;
+
+  return (
+    <>
+      {visuals}
+      {audio.map((track, i) => {
+        const node = (
+          <Audio src={resolveAudioSrc(track.src)} volume={track.volume ?? 1} />
+        );
+        const from = track.startFrame ?? 0;
+        return from > 0 ? (
+          <Sequence key={`audio${i}`} from={from}>
+            {node}
+          </Sequence>
+        ) : (
+          <Sequence key={`audio${i}`}>{node}</Sequence>
+        );
+      })}
+    </>
+  );
+};
+
+/** Caminho absoluto/URL passa direto; relativo resolve via staticFile (public/). */
+const resolveAudioSrc = (src: string): string => {
+  if (/^([a-zA-Z]:[\\/]|[\\/]|https?:|file:)/.test(src)) return src;
+  return staticFile(src);
 };
 
 /** Componente pronto: <TimelineComposition timeline={...} /> */

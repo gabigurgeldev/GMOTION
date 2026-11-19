@@ -158,6 +158,14 @@ export const effectSpecSchema = z.object({
   intensity: z.number().nullish().describe('Effect-specific strength'),
 });
 
+/** Faixa de áudio global (narração/SFX/música), tocada por cima da timeline. */
+export const audioTrackSchema = z.object({
+  src: z.string().describe('Path/URL do arquivo de áudio (staticFile-relative ou absoluto)'),
+  volume: z.number().nullish().describe('0-1, default 1'),
+  startFrame: z.number().int().nullish().describe('Frame em que a faixa começa, default 0'),
+  role: z.enum(['narration', 'sfx', 'music']).nullish(),
+});
+
 export const timelineSchema = z.object({
   fps: z.number().int().describe('Use 30 unless told otherwise'),
   width: z.number().int().describe('1080 for vertical'),
@@ -165,6 +173,7 @@ export const timelineSchema = z.object({
   scenes: z.array(sceneSchema).min(1),
   transitions: z.array(transitionSpecSchema).nullish(),
   effects: z.array(effectSpecSchema).nullish().describe('Global overlays/wrappers'),
+  audio: z.array(audioTrackSchema).nullish().describe('Faixas de áudio globais'),
 });
 
 export type TimelineSchema = z.infer<typeof timelineSchema>;
@@ -172,6 +181,7 @@ export type SceneSpec = z.infer<typeof sceneSchema>;
 export type LayerSpec = z.infer<typeof layerSchema>;
 export type TransitionSpec = z.infer<typeof transitionSpecSchema>;
 export type EffectSpec = z.infer<typeof effectSpecSchema>;
+export type AudioTrackSpec = z.infer<typeof audioTrackSchema>;
 
 /** Valida JSON cru; lança com mensagem legível. */
 export const parseTimeline = (data: unknown): TimelineSchema => {

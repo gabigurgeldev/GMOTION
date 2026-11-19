@@ -2,6 +2,7 @@ import {useLayoutEffect, useMemo, useRef} from 'react';
 import * as THREE from 'three';
 import {useCurrentFrame, useVideoConfig} from 'remotion';
 import {particleState} from './calc';
+import {byQuality, scaledCount, useSceneQuality, type PreviewQuality} from './quality';
 
 export type ParticlesProps = {
   /** Quantidade de partículas. Default: 200. */
@@ -17,6 +18,8 @@ export type ParticlesProps = {
   color?: string;
   /** Intensidade emissiva (brilho). Default: 1.2. */
   glow?: number;
+  /** LOD. Default: herda da cena / auto — low corta pra ~35% das partículas. */
+  previewQuality?: PreviewQuality;
 };
 
 /**
@@ -27,16 +30,20 @@ export type ParticlesProps = {
  * <Particles count={300} color="#8be9fd" spread={7} />
  */
 export const Particles = ({
-  count = 200,
+  count: requestedCount = 200,
   seed = 42,
   spread = 6,
   riseSpeed = 0.5,
   size = 0.05,
   color = '#ffffff',
   glow = 1.2,
+  previewQuality,
 }: ParticlesProps) => {
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
+  const quality = useSceneQuality(previewQuality);
+  const count = scaledCount(requestedCount, quality);
+  const sphereDetail = byQuality(quality, 4, 8);
   const meshRef = useRef<THREE.InstancedMesh>(null);
   const dummy = useMemo(() => new THREE.Object3D(), []);
 
@@ -56,8 +63,8 @@ export const Particles = ({
   }, [count, seed, frame, fps, spread, riseSpeed, dummy]);
 
   return (
-    <instancedMesh ref={meshRef} args={[undefined, undefined, count]}>
-      <sphereGeometry args={[size, 8, 8]} />
+    <instancedMesh key={count} ref={meshRef} args={[undefined, undefined, count]}>
+      <sphereGeometry args={[size, sphereDetail, sphereDetail]} />
       <meshStandardMaterial
         color={color}
         emissive={color}

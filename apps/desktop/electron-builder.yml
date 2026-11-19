@@ -1,0 +1,16 @@
+appId: com.gmotion.desktop
+productName: GMOTION
+directories:
+  output: release
+  buildResources: build
+files:
+  - out/**/*
+  - "!**/*.map"
+win:
+  target:
+    - nsis
+  artifactName: ${productName}-${version}-setup.${ext}
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true

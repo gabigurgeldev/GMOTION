@@ -19,6 +19,14 @@ export {
 } from './ExtrudedText';
 export {Particles, type ParticlesProps} from './Particles';
 export {FloatingImage, type FloatingImageProps} from './FloatingImage';
+export {
+  resolveQuality,
+  scaledCount,
+  byQuality,
+  useSceneQuality,
+  SceneQualityProvider,
+  type PreviewQuality,
+} from './quality';
 export {GltfModel, type GltfModelProps} from './GltfModel';
 
 /** Catálogo — consumido pelo ai-director (Fase 8). */

@@ -6,16 +6,20 @@
  * Opções:   --out <path>   (default: apps/studio/src/generated/ai-timeline.json)
  *           --model <id>   (default: claude-opus-4-8)
  *
- * Requer ANTHROPIC_API_KEY (ou perfil `ant auth login`).
+ * Provider (env GMOTION_AI_PROVIDER):
+ *   (default/unset) -> Anthropic SDK direto, requer ANTHROPIC_API_KEY.
+ *   "openrouter"    -> requer OPENROUTER_API_KEY (opcional OPENROUTER_MODEL).
+ *   "claude-cli"    -> usa o binário `claude` já autenticado (opcional CLAUDE_CLI_PATH).
+ *
  * Depois: pnpm dev -> composition "AiDirected" (reinicie o Studio para recarregar o JSON).
  */
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import Anthropic from '@anthropic-ai/sdk';
-import {zodOutputFormat} from '@anthropic-ai/sdk/helpers/zod';
+import {z} from 'zod';
 import {parseTimeline, timelineDuration, timelineSchema} from './schema';
 import {buildSystemPrompt, generateUserMessage, refineUserMessage} from './prompts';
+import {runStructured, providerFromEnv} from './providers';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const DEFAULT_OUT = path.resolve(
@@ -63,42 +67,30 @@ const main = async () => {
     userMessage = generateUserMessage(args.text);
   }
 
-  const client = new Anthropic();
-  console.error(`Chamando ${args.model}...`);
+  const provider = providerFromEnv();
+  console.error(`Chamando ${args.model} (provider: ${provider})...`);
 
-  const response = await client.messages.parse({
-    model: args.model,
-    max_tokens: 16000,
-    system: buildSystemPrompt(),
-    messages: [{role: 'user', content: userMessage}],
-    output_config: {format: zodOutputFormat(timelineSchema)},
+  const {output, costUsd} = await runStructured({
+    provider,
+    systemPrompt: buildSystemPrompt(),
+    userMessage,
+    jsonSchema: z.toJSONSchema(timelineSchema) as Record<string, unknown>,
+    model: provider === 'openrouter' ? (process.env.OPENROUTER_MODEL ?? args.model) : args.model,
+    cliPath: process.env.CLAUDE_CLI_PATH,
   });
 
-  if (response.stop_reason === 'refusal') {
-    console.error('O modelo recusou a solicitação.');
-    process.exit(1);
-  }
-  if (!response.parsed_output) {
-    console.error('Resposta não validou contra o schema da timeline.');
-    process.exit(1);
-  }
-
-  const timeline = parseTimeline(response.parsed_output);
+  const timeline = parseTimeline(output);
   fs.mkdirSync(path.dirname(args.out), {recursive: true});
   fs.writeFileSync(args.out, JSON.stringify(timeline, null, 2), 'utf8');
 
   const frames = timelineDuration(timeline);
   console.error(
-    `OK: ${timeline.scenes.length} cenas, ${frames} frames (${(frames / timeline.fps).toFixed(1)}s) -> ${args.out}`,
+    `OK: ${timeline.scenes.length} cenas, ${frames} frames (${(frames / timeline.fps).toFixed(1)}s) — custo ~$${costUsd.toFixed(4)} -> ${args.out}`,
   );
   console.error('Abra o Studio (pnpm dev) e selecione "AiDirected". Se já estava aberto, reinicie.');
 };
 
 main().catch((err: unknown) => {
-  if (err instanceof Anthropic.APIError) {
-    console.error(`Erro da API (${err.status}): ${err.message}`);
-  } else {
-    console.error(err);
-  }
+  console.error(err instanceof Error ? err.message : err);
   process.exit(1);
 });

@@ -5,6 +5,8 @@
   "packageManager": "pnpm@11.8.0",
   "scripts": {
     "dev": "turbo run dev --filter=studio",
+    "dev:desktop": "pnpm --filter desktop dev",
+    "build:desktop": "pnpm --filter desktop build",
     "build": "turbo run build",
     "test": "turbo run test",
     "render": "turbo run render --filter=studio",

@@ -12,6 +12,18 @@ export {ProgressBar, type ProgressBarProps} from './ProgressBar';
 export {Badge, type BadgeProps} from './Badge';
 export {LottieLayer, type LottieLayerProps} from './LottieLayer';
 
+export {
+  splitUnits,
+  staggerDelay,
+  pathTextOffset,
+  runDelay,
+  type TextUnit,
+} from './text-calc';
+export {SplitText, type SplitTextProps} from './SplitText';
+export {PathText, type PathTextProps} from './PathText';
+export {AnimatedStroke, type AnimatedStrokeProps} from './AnimatedStroke';
+export {MixedTypeText, type MixedTypeTextProps, type TextRun} from './MixedTypeText';
+
 /** Catálogo — consumido pelo ai-director (Fase 8). */
 export const allGraphicNames = [
   'lower-third',

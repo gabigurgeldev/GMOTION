@@ -28,3 +28,20 @@ apps/studio/public/capcut/
 # Artefatos de render
 *.mp4
 *.mov
+
+# Cache de análise de áudio (derivado — regenerar via @gmotion/audio analyze)
+*.analysis.json
+
+# Catálogo de assets (derivado — regenerar via scripts/index-assets.mjs)
+asset-manifest.json
+.gmotion-thumbs/
+
+# Assets copiados do catálogo pra demo do studio
+apps/studio/public/asset-demo/
+apps/studio/public/track-demo/
+
+# build/release artifacts and large assets
+EFEITOS ASSETS.zip
+apps/desktop/release/
+apps/studio/build/
+*.zip

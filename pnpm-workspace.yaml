@@ -2,7 +2,11 @@ packages:
   - "apps/*"
   - "packages/*"
 allowBuilds:
+  ffmpeg-static: true
+  ffprobe-static: true
   esbuild: true
+  electron: true
+  electron-winstaller: true
 minimumReleaseAgeExclude:
   - '@remotion/bundler@4.0.495'
   - '@remotion/canvas-capture@4.0.495'

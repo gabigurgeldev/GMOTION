@@ -15,6 +15,8 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.112.3",
+    "@gmotion/asset-library": "workspace:*",
+    "@gmotion/capcut": "workspace:*",
     "@gmotion/core": "workspace:*",
     "@gmotion/effects": "workspace:*",
     "@gmotion/graphics": "workspace:*",
@@ -22,6 +24,7 @@
     "@gmotion/templates": "workspace:*",
     "@gmotion/three-scenes": "workspace:*",
     "@gmotion/transitions": "workspace:*",
+    "@remotion/media-parser": "4.0.495",
     "@remotion/transitions": "4.0.495",
     "zod": "4.3.6"
   },
